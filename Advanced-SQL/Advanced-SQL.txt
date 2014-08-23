@@ -237,13 +237,14 @@ statement to add a foreign key constraint between tables Users and Groups tables
 26. Write a SQL query to display the minimal employee salary by department and job title along with the name of some of the employees that take it. 
 
 	USE TelerikAcademy;
-	SELECT d.Name AS [Deparment],
+	SELECT MIN(Salary) AS [Minimal Salary],
 			e.JobTitle AS [Job Title],
-			MIN(e.Salary) AS [Minimal Salary]
+			d.Name AS [Department Name],
+			MIN(e.FirstName + ' ' + e.LastName) AS [FULL Name]
 	FROM Employees e
-		JOIN Departments d
+		INNER JOIN Departments d
 			ON e.DepartmentID = d.DepartmentID
-		GROUP BY d.Name, e.JobTitle;
+	GROUP BY d.Name, e.JobTitle
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 27. Write a SQL query to display the town where maximal number of employees work. 
 
@@ -333,7 +334,7 @@ table with triggers. For each change keep the old record data, the new record da
 	INSERT INTO WorkhoursLog([OldEmployeeID],[OldDate],[OldTask],[OldHours],[OldComments],
 									[NewEmployeeID],[NewDate],[NewTask],[NewHours],[NewComments],[Command])
 	SELECT d.EmployeeID, d.Date, d.Task, d.Hours, d.Comments, 
-		i.EmployeeID, i.Date, i.Task, i.Hours, i.Hours, 'update'
+		i.EmployeeID, i.Date, i.Task, i.Hours, i.Comments, 'update'
 	FROM deleted d
 		INNER JOIN inserted i
 			ON d.TaskID = i.TaskID;
@@ -347,11 +348,48 @@ table with triggers. For each change keep the old record data, the new record da
 		NULL, NULL, NULL, NULL, NULL, 'delete'
 	FROM deleted d
 	GO
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-30. Start a database transaction, delete all employees from the 'Sales' department along with all dependent records from the pother tables. At the end rollback the transaction.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+30. Start a database transaction, delete all employees from the 'Sales' department along with all dependent records from the other tables. At the end rollback the transaction.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+	USE TelerikAcademy;
+	BEGIN TRAN
+		DELETE FROM Employees
+			SELECT d.Name
+			FROM Employees e
+				INNER JOIN Departments d
+					ON e.DepartmentID = d.DepartmentID
+			WHERE d.Name = 'Sales'
+			GROUP BY d.Name
+	ROLLBACK TRAN
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 31. Start a database transaction and drop the table EmployeesProjects. Now how you could restore back the lost table data? 
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	USE TelerikAcademy;
+	BEGIN TRAN
+		DROP TABLE EmployeesProjects
+	ROLLBACK TRAN
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 32. Find how to use temporary tables in SQL Server. Using temporary tables backup all records from EmployeesProjects and restore them back after dropping and re-creating the table. 
+
+	USE TelerikAcademy;
+	CREATE TABLE #TempEmployeeProjects(
+		EmployeeID int,
+		ProjectID int
+	)
+	
+	INSERT INTO #TempEmployeeProjects
+	SELECT ep.EmployeeID AS [EmployeeID], 
+			ep.ProjectID AS [ProjectID]
+	FROM EmployeesProjects ep
+	
+	DROP TABLE EmployeesProjects
+	
+	CREATE TABLE EmployeesProjects(
+		EmployeeID int,
+		ProjectID int
+	)
+	
+	INSERT INTO EmployeesProjects
+	SELECT tep.EmployeeID AS [EmployeeID], 
+			tep.ProjectID AS [ProjectID]
+	FROM #TempEmployeeProjects tep
