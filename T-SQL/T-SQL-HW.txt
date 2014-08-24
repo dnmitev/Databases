@@ -1,0 +1,162 @@
+1. Create a database with two tables: Persons(Id(PK), FirstName, LastName, SSN) and Accounts(Id(PK), PersonId(FK), Balance). Insert few records for testing. Write a stored 
+procedure that selects the full names of all persons.
+
+	USE PaymentSystem
+	
+	CREATE TABLE People(
+		[ID] int IDENTITY,
+		[FirstName] nvarchar(50) NOT NULL,
+		[LastName] nvarchar(50) NOT NULL,
+		[SSN] nvarchar(50) NOT NULL UNIQUE,
+		CONSTRAINT PK_People PRIMARY KEY (ID)
+	)
+	GO
+	
+	CREATE TABLE Accounts(
+		[ID] int IDENTITY,
+		[PersonID] int,
+		[Balance] money,
+		CONSTRAINT PK_Accounts PRIMARY KEY (ID),
+		CONSTRAINT FK_People_Accounts FOREIGN KEY (PersonID) REFERENCES People(ID) 
+	)
+	GO
+	
+	INSERT INTO People
+	VALUES	
+		('Atanas', 'Atanasov', '8802142201'),
+		('Ivan', 'Atanasov', '3312151234'),
+		('Georgi', 'Georgiev', '6301013214'),
+		('Anatoli', 'Kiumurov', '7305254682'),
+		('Naftalin', 'Benzinov', '8508125599'),
+		('Gergana', 'Kurubarova', '8112213515'),
+		('Maria', 'Otvarachkova', '8409178822'),
+		('Kaka', 'Danche', '5511075472'),
+		('Dimitar', 'Dimitrov', '9503035832')
+	GO
+	
+	INSERT INTO Accounts
+	VALUES
+		(1, 10000),
+		(2, 150.25),
+		(3, 25.05),
+		(4, 250123),
+		(5, 1000000),
+		(6, 589),
+		(7, 1250),
+		(8, 25140),
+		(9, 21356.65)
+	GO
+	
+	CREATE PROC [dbo].usp_SelectFullName 
+	AS
+		SELECT p.FirstName + ' ' + p.LastName AS [FullName]
+		FROM People p
+	GO
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Create a stored procedure that accepts a number as a parameter and returns all persons who have more money in their accounts than the supplied number.
+
+	CREATE PROC [dbo].usp_SelectRicherPeople(@sum money)
+	AS
+		SELECT p.FirstName + ' ' + p.LastName AS [FullName],
+				a.Balance AS [Balance]
+		FROM People p
+			INNER JOIN Accounts a
+				ON p.ID = a.PersonID
+		WHERE a.Balance > @sum
+	GO
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Create a function that accepts as parameters – sum, yearly interest rate and number of months. It should calculate and return the new sum. Write a SELECT to 
+test whether the function works as expected.
+
+	CREATE FUNCTION ufn_CalculateInterestOnSum(
+			@sum money,
+			@yearlyInterest float,
+			@monthsCount int)
+		RETURNS money
+	AS
+		BEGIN
+			RETURN @sum + (@monthsCount/12)*((@yearlyInterest*@SUM)/100) 
+		END
+	GO
+	
+	SELECT [dbo].ufn_CalculateInterestOnSum(1000, 10.5, 12)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Create a stored procedure that uses the function from the previous example to give an interest to a person''s account for one month. It should take the AccountId and the 
+interest rate as parameters.
+
+	CREATE PROC [dbo].usp_PayMonthUserInterest(
+			@accountId int,
+			@interestRate float)
+	AS
+		DECLARE @accountBalance money
+		SELECT @accountBalance =  a.Balance
+		FROM Accounts a
+		WHERE a.ID = @accountId
+		SELECT [dbo].ufn_CalculateInterestOnSum(@accountBalance, @interestRate, 1)
+	GO
+	
+	EXEC usp_PayMonthUserInterest 2, 10
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5. Add two more stored procedures WithdrawMoney(AccountId, money) and DepositMoney (AccountId, money) that operate in transactions.
+
+	CREATE PROC [dbo].usp_WithdrawMoney(
+			@accountId int,
+			@money money)
+	AS
+		DECLARE @moneyLeft money
+		SELECT @moneyLeft = a.Balance - @money 
+		FROM Accounts a
+		WHERE a.ID = @accountId
+	
+		UPDATE Accounts
+		SET Balance = @moneyLeft
+		WHERE Accounts.ID = @accountId
+	GO 
+	
+	CREATE PROC [dbo].usp_DepositMoney(
+			@accountId int,
+			@money money)
+	AS
+		DECLARE @moneyLeft money
+		SELECT @moneyLeft = a.Balance + @money 
+		FROM Accounts a
+		WHERE a.ID = @accountId
+	
+		UPDATE Accounts
+		SET Balance = @moneyLeft
+		WHERE Accounts.ID = @accountId
+	GO 
+	
+	EXEC usp_DepositMoney 1, 25250
+	EXEC usp_WithdrawMoney 1, 15250
+	GO
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6. Create another table – Logs(LogID, AccountID, OldSum, NewSum). Add a trigger to the Accounts table that enters a new entry into the Logs table every time the sum on 
+an account changes.
+
+	CREATE TRIGGER tr_BalanceChanged ON Accounts FOR UPDATE
+	AS
+	INSERT INTO Logs
+			SELECT i.ID, d.Balance, i.Balance
+			FROM deleted d 
+				INNER JOIN inserted i
+					ON d.ID = i.ID
+	GO
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7. Define a function in the database TelerikAcademy that returns all Employee''s names (first or middle or last name) and all town''s names that are comprised of given set
+of letters. Example 'oistmiahf' will return 'Sofia', 'Smith', … but not 'Rob' and 'Guy'.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8. Using database cursor write a T-SQL script that scans all employees and their addresses and prints all pairs of employees that live in the same town.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9. * Write a T-SQL script that shows for each town a list of all employees that live in it. Sample output:
+			Sofia -> Svetlin Nakov, Martin Kulov, George Denchev
+			Ottawa -> Jose Saraiva
+			
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10. Define a .NET aggregate function StrConcat that takes as input a sequence of strings and return a single string that consists of the input strings separated by ','. 
+For example the following SQL statement should return a single string:
+			SELECT StrConcat(FirstName + ' ' + LastName)
+			FROM Employees
+			
