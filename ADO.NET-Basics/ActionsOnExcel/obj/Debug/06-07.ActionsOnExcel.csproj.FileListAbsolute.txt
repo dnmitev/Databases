@@ -1,0 +1,5 @@
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnExcel\bin\Debug\ActionsOnExcel.exe.config
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnExcel\bin\Debug\ActionsOnExcel.exe
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnExcel\bin\Debug\ActionsOnExcel.pdb
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnExcel\obj\Debug\ActionsOnExcel.exe
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnExcel\obj\Debug\ActionsOnExcel.pdb

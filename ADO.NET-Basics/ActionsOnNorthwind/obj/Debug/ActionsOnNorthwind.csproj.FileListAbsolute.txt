@@ -1,0 +1,6 @@
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnNorthwind\bin\Debug\ActionsOnNorthwind.exe.config
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnNorthwind\bin\Debug\ActionsOnNorthwind.exe
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnNorthwind\bin\Debug\ActionsOnNorthwind.pdb
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnNorthwind\obj\Debug\ActionsOnNorthwind.csprojResolveAssemblyReference.cache
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnNorthwind\obj\Debug\ActionsOnNorthwind.exe
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnNorthwind\obj\Debug\ActionsOnNorthwind.pdb
