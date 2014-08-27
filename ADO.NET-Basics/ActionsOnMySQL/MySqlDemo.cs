@@ -5,15 +5,12 @@
 namespace ActionsOnMySQL
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using MySql.Data.MySqlClient;
 
-    class MySqlDemo
+    internal class MySqlDemo
     {
-        static void Main()
+        private static void Main()
         {
             var dbCon = new MySqlConnection(ActionsOnMySQL.Settings.Default.ConnectionString);
             dbCon.Open();
@@ -44,14 +41,19 @@ namespace ActionsOnMySQL
                 Console.Write("Enter authorId to input: ");
                 int authorId = int.Parse(Console.ReadLine());
 
-                var command = new MySqlCommand("INSERT INTO bookstore.books(Title, PublishDate, ISBN, AuthorID) VALUES (@title,@publishDate,@isbn,@authorId)",dbCon);
-                command.Parameters.AddWithValue("@title", title);
-                command.Parameters.AddWithValue("@publishDate", publishDate);
-                command.Parameters.AddWithValue("@isbn", isbn);
-                command.Parameters.AddWithValue("@authorId", authorId);
-
-                command.ExecuteNonQuery();
+                GetBokkInserted(dbCon, title, publishDate, isbn, authorId);
             }
+        }
+ 
+        private static void GetBokkInserted(MySqlConnection dbCon, string title, int publishDate, string isbn, int authorId)
+        {
+            var command = new MySqlCommand("INSERT INTO bookstore.books(Title, PublishDate, ISBN, AuthorID) VALUES (@title,@publishDate,@isbn,@authorId)",dbCon);
+            command.Parameters.AddWithValue("@title", title);
+            command.Parameters.AddWithValue("@publishDate", publishDate);
+            command.Parameters.AddWithValue("@isbn", isbn);
+            command.Parameters.AddWithValue("@authorId", authorId);
+
+            command.ExecuteNonQuery();
         }
 
         private static void FindByBookTitle(MySqlConnection dbCon, string title)
@@ -75,9 +77,7 @@ namespace ActionsOnMySQL
 
         private static void ListAllBooks(MySqlConnection dbCon)
         {
-            var command = new MySqlCommand("SELECT * FROM bookstore.books b	" +
-                                           "INNER JOIN bookstore.authors a " +
-                                           "ON b.AuthorID = a.AuthorID", dbCon);
+            var command = new MySqlCommand("SELECT * FROM bookstore.books b	INNER JOIN bookstore.authors a ON b.AuthorID = a.AuthorID", dbCon);
             var reader = command.ExecuteReader();
 
             using (reader)

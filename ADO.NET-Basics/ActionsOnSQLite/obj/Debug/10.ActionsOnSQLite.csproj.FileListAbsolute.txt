@@ -1,0 +1,16 @@
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\bin\Debug\ActionsOnSQLite.exe.config
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\obj\Debug\10.ActionsOnSQLite.csprojResolveAssemblyReference.cache
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\bin\Debug\x64\SQLite.Interop.dll
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\bin\Debug\x86\SQLite.Interop.dll
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\bin\Debug\ActionsOnSQLite.exe
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\bin\Debug\ActionsOnSQLite.pdb
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\bin\Debug\EntityFramework.dll
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\bin\Debug\System.Data.SQLite.dll
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\bin\Debug\EntityFramework.xml
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\bin\Debug\System.Data.SQLite.xml
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\obj\Debug\ActionsOnSQLite.exe
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnSQLite\obj\Debug\ActionsOnSQLite.pdb
