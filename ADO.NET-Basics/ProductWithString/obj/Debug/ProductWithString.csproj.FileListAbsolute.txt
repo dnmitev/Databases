@@ -1,0 +1,1 @@
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ProductWithString\bin\Debug\ProductWithString.exe.config

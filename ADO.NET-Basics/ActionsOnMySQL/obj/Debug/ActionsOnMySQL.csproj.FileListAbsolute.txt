@@ -1,0 +1,1 @@
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ActionsOnMySQL\bin\Debug\ActionsOnMySQL.exe.config

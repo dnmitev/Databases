@@ -23,17 +23,37 @@ namespace ActionsOnMySQL
                 ListAllBooks(dbCon);
 
                 Console.Write("Search for title: ");
-                string title = Console.ReadLine();
+                string searchString = Console.ReadLine();
 
-                if (title.Length < 3)
+                if (searchString.Length < 3)
                 {
                     throw new ArgumentException("Title cannot be less than 3 symbols.");
                 }
 
-                FindByBookTitle(dbCon, title);
+                FindByBookTitle(dbCon, searchString);
+
+                Console.Write("Enter title to input: ");
+                string title = Console.ReadLine();
+
+                Console.Write("Enter publish date to input: ");
+                int publishDate = int.Parse(Console.ReadLine());
+
+                Console.Write("Enter ISBN to input: ");
+                string isbn = Console.ReadLine();
+
+                Console.Write("Enter authorId to input: ");
+                int authorId = int.Parse(Console.ReadLine());
+
+                var command = new MySqlCommand("INSERT INTO bookstore.books(Title, PublishDate, ISBN, AuthorID) VALUES (@title,@publishDate,@isbn,@authorId)",dbCon);
+                command.Parameters.AddWithValue("@title", title);
+                command.Parameters.AddWithValue("@publishDate", publishDate);
+                command.Parameters.AddWithValue("@isbn", isbn);
+                command.Parameters.AddWithValue("@authorId", authorId);
+
+                command.ExecuteNonQuery();
             }
         }
- 
+
         private static void FindByBookTitle(MySqlConnection dbCon, string title)
         {
             var command = new MySqlCommand("SELECT * FROM books WHERE Title LIKE @searched", dbCon);
@@ -57,7 +77,7 @@ namespace ActionsOnMySQL
         {
             var command = new MySqlCommand("SELECT * FROM bookstore.books b	" +
                                            "INNER JOIN bookstore.authors a " +
-                                           "ON  b.AuthorID = a.AuthorID", dbCon);
+                                           "ON b.AuthorID = a.AuthorID", dbCon);
             var reader = command.ExecuteReader();
 
             using (reader)

@@ -1,0 +1,6 @@
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ProductWithString\bin\Debug\ProductWithString.exe.config
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ProductWithString\obj\Debug\08.ProductWithString.csprojResolveAssemblyReference.cache
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ProductWithString\bin\Debug\ProductWithString.exe
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ProductWithString\bin\Debug\ProductWithString.pdb
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ProductWithString\obj\Debug\ProductWithString.exe
+C:\Users\Dimitar\Documents\Visual Studio 2013\Projects\Databases\ADO.NET-Basics\ProductWithString\obj\Debug\ProductWithString.pdb
