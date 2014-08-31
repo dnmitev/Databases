@@ -11,6 +11,7 @@
     public class StudentSystemDbContext : DbContext, IStudentSystemDBContext
     {
         public StudentSystemDbContext()
+            : base("StudentSystemConnection")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<StudentSystemDbContext, Configuration>());
         }

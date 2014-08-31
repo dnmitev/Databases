@@ -2,9 +2,9 @@
 {
     using System;
     using System.Linq;
-
     using StudentSystem.Data;
     using StudentSystem.Models;
+    using System.Globalization;
 
     internal class Client
     {
@@ -15,7 +15,8 @@
             data.Homeworks.Add(new Homework
             {
                 FileName = "Domestic rakia",
-                Deadline = new DateTime(2014, 08, 31)
+                Deadline = new DateTime(2014,08,31),
+                TimeSent = new DateTime(2014,08,29)
             });
 
             data.Students.Add(new Student
