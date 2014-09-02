@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikAcademy.Models", "Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.NPlus1Problem", "NPlus1Problem\01.NPlus1Problem.csproj", "{D9512DC8-2EC9-480A-9513-B2DFBEA7E89C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.EarlyToListCallProblem", "EarlyToListCallProblem\02.EarlyToListCallProblem.csproj", "{361EF558-7615-46FA-831B-A2F8F11E2C5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D9512DC8-2EC9-480A-9513-B2DFBEA7E89C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9512DC8-2EC9-480A-9513-B2DFBEA7E89C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9512DC8-2EC9-480A-9513-B2DFBEA7E89C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{361EF558-7615-46FA-831B-A2F8F11E2C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{361EF558-7615-46FA-831B-A2F8F11E2C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{361EF558-7615-46FA-831B-A2F8F11E2C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{361EF558-7615-46FA-831B-A2F8F11E2C5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
