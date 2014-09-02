@@ -7,6 +7,8 @@
       <Diagram DiagramId="aa8cfb9dc35a40dd99d61f884beb390d" Name="Diagram1">
         <EntityTypeShape EntityType="AtmSystemModel.CardAccount" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AtmSystemModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtmSystemModel.TransactionHistory" Width="1.5" PointX="3" PointY="3.75" />
+        <AssociationConnector Association="AtmSystemModel.FK_TransactionHistory_CardAccounts" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -14,9 +14,16 @@ namespace AtmSystem.Models
     
     public partial class CardAccount
     {
+        public CardAccount()
+        {
+            this.TransactionHistories = new HashSet<TransactionHistory>();
+        }
+    
         public int Id { get; set; }
         public string CardNumber { get; set; }
         public string CardPIN { get; set; }
         public decimal CardCash { get; set; }
+    
+        public virtual ICollection<TransactionHistory> TransactionHistories { get; set; }
     }
 }

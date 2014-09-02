@@ -27,5 +27,6 @@ namespace AtmSystem.Models
     
         public virtual DbSet<CardAccount> CardAccounts { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<TransactionHistory> TransactionHistories { get; set; }
     }
 }

@@ -70,6 +70,9 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>AtmSystemContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="TransactionHistory.cs">
+      <DependentUpon>AtmSystemContext.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="AtmSystemContext.edmx">
