@@ -1,5 +1,4 @@
-﻿
-namespace CrowdChat.VisualClient
+﻿namespace CrowdChat.VisualClient
 {
     using System;
     using System.Linq;
