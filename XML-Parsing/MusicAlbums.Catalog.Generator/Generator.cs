@@ -30,7 +30,6 @@ namespace MusicAlbums.Catalog.Generator
 
                 writer.WriteStartDocument();
                 writer.WriteStartElement("catalog");
-                writer.WriteAttributeString("name", "music albums catalog");
 
                 writer.WriteStartElement("albums");
 
@@ -41,7 +40,7 @@ namespace MusicAlbums.Catalog.Generator
                         GetRandomString(20),
                         GetRandomNumber(1970, 2014),
                         GetRandomString(5),
-                        GetRandomPrice(1.97, 19.97),
+                        GetRandomPrice(1.97, 29.97),
                         new List<string>()
                         {
                             GetRandomString(),
