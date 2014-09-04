@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicAlbums.Catalog.Generator", "MusicAlbums.Catalog.Generator\MusicAlbums.Catalog.Generator.csproj", "{EB292653-D58C-473D-81A1-9CE2643A74C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. MusicAlbums.Catalog.Generator", "MusicAlbums.Catalog.Generator\01. MusicAlbums.Catalog.Generator.csproj", "{EB292653-D58C-473D-81A1-9CE2643A74C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-03. ArtistsExtracotr", "ArtistsExtracotr\02-03. ArtistsExtracotr.csproj", "{1CE6E770-B787-4606-8AF0-C40D1A9269FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EB292653-D58C-473D-81A1-9CE2643A74C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB292653-D58C-473D-81A1-9CE2643A74C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB292653-D58C-473D-81A1-9CE2643A74C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CE6E770-B787-4606-8AF0-C40D1A9269FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CE6E770-B787-4606-8AF0-C40D1A9269FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CE6E770-B787-4606-8AF0-C40D1A9269FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CE6E770-B787-4606-8AF0-C40D1A9269FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
