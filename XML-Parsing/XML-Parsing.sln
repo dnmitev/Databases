@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. ExpensiveAlbumsDeleting
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-06. SongsExtractor", "SongsExtractor\05-06. SongsExtractor.csproj", "{C9B6E0CC-F9FE-4C46-B7F0-CF9722A5E1B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. CreateXmlFromTextFile", "CreateXmlFromTextFile\07. CreateXmlFromTextFile.csproj", "{4804B806-63DA-4C89-8B2F-463CC9638B1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C9B6E0CC-F9FE-4C46-B7F0-CF9722A5E1B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9B6E0CC-F9FE-4C46-B7F0-CF9722A5E1B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9B6E0CC-F9FE-4C46-B7F0-CF9722A5E1B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4804B806-63DA-4C89-8B2F-463CC9638B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4804B806-63DA-4C89-8B2F-463CC9638B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4804B806-63DA-4C89-8B2F-463CC9638B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4804B806-63DA-4C89-8B2F-463CC9638B1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
