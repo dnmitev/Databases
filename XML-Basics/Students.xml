@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="students.xslt"?>
+<students xmlns:students="urn:students">
+  <student>
+    <name>Pesho Peshev</name>
+    <sex>Male,Female,Sometimes Camel</sex>
+    <birthdate>1991-01-25</birthdate>
+    <phone>0888987123</phone>
+    <email>evil_shpek91@abv.bg</email>
+    <course>Drinking</course>
+    <specialty>Concentrates</specialty>
+    <facultyNumber>22022</facultyNumber>
+    <examsTaken>
+      <exam>
+        <course>Pickels</course>
+        <tutor>Bat Gencho</tutor>
+        <score>3.0</score>
+      </exam>
+      <exam>
+        <course>Shopska Salad</course>
+        <tutor>Bat Dancho</tutor>
+        <score>5.0</score>
+      </exam>
+      <exam>
+        <course>Boiling rakia in domestic conditions</course>
+        <tutor>Bat Georgi</tutor>
+        <score>6.0</score>
+      </exam>
+    </examsTaken>
+    <enrollment>
+      <date>2012-09-20</date>
+      <score>5.5</score>
+    </enrollment>
+    <teachersEndrosment>
+      <endorsment>Rakia</endorsment>
+      <endorsment>Vodka</endorsment>
+      <endorsment>Beer</endorsment>
+    </teachersEndrosment>
+  </student>
+</students>
+<!-- Works on Mozilla but doesn't know why doesn't work on Chrome'' -->
