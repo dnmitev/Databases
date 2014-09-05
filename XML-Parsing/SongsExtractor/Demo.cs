@@ -4,16 +4,13 @@
 namespace SongsExtractor
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using System.Xml;
     using System.Xml.Linq;
     
-    class Program
+    internal class Demo
     {
-        static void Main()
+        private static void Main()
         {
             ExtractSongTitlesWithXmlReader();
 

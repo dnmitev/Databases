@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C9B6E0CC-F9FE-4C46-B7F0-CF9722A5E1B5}</ProjectGuid>
+    <ProjectGuid>{26E6BDF5-748D-4DE5-B0B5-A9006759255E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SongsExtractor</RootNamespace>
-    <AssemblyName>SongsExtractor</AssemblyName>
+    <RootNamespace>SpecificAlbumExtractor</RootNamespace>
+    <AssemblyName>SpecificAlbumExtractor</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
