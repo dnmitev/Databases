@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-06. SongsExtractor", "So
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. CreateXmlFromTextFile", "CreateXmlFromTextFile\07. CreateXmlFromTextFile.csproj", "{4804B806-63DA-4C89-8B2F-463CC9638B1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. AlbumXmlCreator", "AlbumXmlCreator\08. AlbumXmlCreator.csproj", "{2ED5CDEA-7CDA-45AE-876C-4C107604D2D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4804B806-63DA-4C89-8B2F-463CC9638B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4804B806-63DA-4C89-8B2F-463CC9638B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4804B806-63DA-4C89-8B2F-463CC9638B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED5CDEA-7CDA-45AE-876C-4C107604D2D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED5CDEA-7CDA-45AE-876C-4C107604D2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED5CDEA-7CDA-45AE-876C-4C107604D2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED5CDEA-7CDA-45AE-876C-4C107604D2D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
