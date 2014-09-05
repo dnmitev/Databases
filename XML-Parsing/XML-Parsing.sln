@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. CreateXmlFromTextFile",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. AlbumXmlCreator", "AlbumXmlCreator\08. AlbumXmlCreator.csproj", "{2ED5CDEA-7CDA-45AE-876C-4C107604D2D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderDataToXml", "FolderDataToXml\FolderDataToXml.csproj", "{3D56A2A2-97E0-43B8-B3E9-2A0CAF4E79E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{2ED5CDEA-7CDA-45AE-876C-4C107604D2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ED5CDEA-7CDA-45AE-876C-4C107604D2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ED5CDEA-7CDA-45AE-876C-4C107604D2D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D56A2A2-97E0-43B8-B3E9-2A0CAF4E79E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D56A2A2-97E0-43B8-B3E9-2A0CAF4E79E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D56A2A2-97E0-43B8-B3E9-2A0CAF4E79E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D56A2A2-97E0-43B8-B3E9-2A0CAF4E79E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
