@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. CreateXmlFromTextFile",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. AlbumXmlCreator", "AlbumXmlCreator\08. AlbumXmlCreator.csproj", "{2ED5CDEA-7CDA-45AE-876C-4C107604D2D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderDataToXml", "FolderDataToXml\FolderDataToXml.csproj", "{3D56A2A2-97E0-43B8-B3E9-2A0CAF4E79E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-10. FolderDataToXml", "FolderDataToXml\09-10. FolderDataToXml.csproj", "{3D56A2A2-97E0-43B8-B3E9-2A0CAF4E79E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

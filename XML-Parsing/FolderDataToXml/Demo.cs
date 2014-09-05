@@ -4,16 +4,15 @@
 namespace FolderDataToXml
 {
     using System;
-    using System.Collections.Generic;
     using System.IO;
     using System.Linq;
     using System.Text;
-    using System.Threading.Tasks;
     using System.Xml;
+    using System.Xml.Linq;
 
-    class Demo
+    internal class Demo
     {
-        static void Main()
+        private static void Main()
         {
             string folderPath = "../../";
             string outputXml = "../../folderData.xml";
@@ -21,6 +20,34 @@ namespace FolderDataToXml
             DirectoryInfo dirInfo = new DirectoryInfo(folderPath);
             Encoding encoding = Encoding.UTF8;
 
+            GetDirectoryDataUsingXmlWriter(outputXml, encoding, dirInfo);
+
+            var doc = new XDocument(GetDirectoryDataWithLinq(dirInfo));
+            doc.Save("../../folderData2.xml");
+        }
+
+        private static XElement GetDirectoryDataWithLinq(DirectoryInfo dirInfo)
+        {
+            var root = new XElement("dirs");
+            var info = new XElement("dir", new XAttribute("dir", dirInfo.Name));
+
+            root.Add(info);
+
+            foreach (var file in dirInfo.GetFiles())
+            {
+                info.Add(new XElement("file", file.Name));
+            }
+
+            foreach (var subDir in dirInfo.GetDirectories())
+            {
+                info.Add(GetDirectoryDataWithLinq(subDir));
+            }
+
+            return root;
+        }
+ 
+        private static void GetDirectoryDataUsingXmlWriter(string outputXml, Encoding encoding, DirectoryInfo dirInfo)
+        {
             using (XmlTextWriter writer = new XmlTextWriter(outputXml,encoding))
             {
                 writer.Formatting = Formatting.Indented;
@@ -28,13 +55,12 @@ namespace FolderDataToXml
                 writer.Indentation = 1;
 
                 writer.WriteStartDocument();
-                writer.WriteStartElement("directories");
+                writer.WriteStartElement("dirs");
 
                 BuildXmlData(writer, dirInfo);
 
                 writer.WriteEndDocument();
             }
-
         }
 
         private static void BuildXmlData(XmlTextWriter writer, DirectoryInfo dirInfo)
@@ -44,7 +70,7 @@ namespace FolderDataToXml
                 return;
             }
 
-            writer.WriteStartElement("directory");
+            writer.WriteStartElement("dir");
             writer.WriteStartAttribute("name", dirInfo.Name);
 
             foreach (var file in dirInfo.GetFiles())
