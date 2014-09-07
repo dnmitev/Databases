@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dirs>
+  <dir dir="FolderDataToXml">
+    <file>App.config</file>
+    <file>Demo.cs</file>
+    <file>folderData.xml</file>
+    <file>folderData2.xml</file>
+    <file>FolderDataToXml.csproj</file>
+    <dirs>
+      <dir dir="bin">
+        <dirs>
+          <dir dir="Debug">
+            <file>FolderDataToXml.exe</file>
+            <file>FolderDataToXml.exe.config</file>
+            <file>FolderDataToXml.pdb</file>
+            <file>FolderDataToXml.vshost.exe</file>
+            <file>FolderDataToXml.vshost.exe.config</file>
+            <file>FolderDataToXml.vshost.exe.manifest</file>
+          </dir>
+        </dirs>
+        <dirs>
+          <dir dir="Release" />
+        </dirs>
+      </dir>
+    </dirs>
+    <dirs>
+      <dir dir="obj">
+        <dirs>
+          <dir dir="Debug">
+            <file>DesignTimeResolveAssemblyReferencesInput.cache</file>
+            <file>FolderDataToXml.csproj.FileListAbsolute.txt</file>
+            <file>FolderDataToXml.csprojResolveAssemblyReference.cache</file>
+            <file>FolderDataToXml.exe</file>
+            <file>FolderDataToXml.pdb</file>
+            <file>TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</file>
+            <file>TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs</file>
+            <file>TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs</file>
+            <dirs>
+              <dir dir="TempPE" />
+            </dirs>
+          </dir>
+        </dirs>
+      </dir>
+    </dirs>
+    <dirs>
+      <dir dir="Properties">
+        <file>AssemblyInfo.cs</file>
+      </dir>
+    </dirs>
+  </dir>
+</dirs>
