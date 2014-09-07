@@ -2,6 +2,7 @@
 {
     using Bookstore.Data;
     using Bookstore.Models;
+    using Bookstore.Utilities;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -16,12 +17,12 @@
             // var data = new BookstoreData("BookstoreConnectionExpress");
             var data = new BookstoreData("BookstoreConnection");
 
-            data.Books.Add(new Book()
-            {
-                Title = "ala bala",
-            });
+            string fileToParse = "../../../XmlFiles/complex-books.xml";
+            string queriesFile = "../../../XmlFiles/reviews-queries.xml";
+            string queriesResultsFile = "../../../XmlFiles/reviews-search-results.xml";
 
-            data.SaveChanges();
+            var bookParser = new BookParser(data, fileToParse);
+            bookParser.ParseFile();
         }
     }
 }

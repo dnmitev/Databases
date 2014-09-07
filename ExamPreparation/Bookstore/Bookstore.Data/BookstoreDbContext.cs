@@ -18,7 +18,8 @@
         public BookstoreDbContext(string connectionstring)
             : base(connectionstring)
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<BookstoreDbContext, Configuration>());
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<BookstoreDbContext, Configuration>());
+            Database.SetInitializer(new DropCreateDatabaseAlways<BookstoreDbContext>());
         }
 
         public IDbSet<Book> Books { get; set; }

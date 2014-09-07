@@ -31,8 +31,9 @@
 
         public void Add(T entity)
         {
-            var entry = this.AttachIfDetached(entity);
-            entry.State = EntityState.Added;
+            this.set.Add(entity);
+            //var entry = this.AttachIfDetached(entity);
+            //entry.State = EntityState.Added;
         }
 
         public void Update(T entity)
