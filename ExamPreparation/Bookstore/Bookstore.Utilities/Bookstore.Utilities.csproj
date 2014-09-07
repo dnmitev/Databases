@@ -42,6 +42,7 @@
     <Compile Include="BookParser.cs" />
     <Compile Include="XmlDataParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlQueryExecutor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bookstore.Data\Bookstore.Data.csproj">

@@ -21,8 +21,11 @@
             string queriesFile = "../../../XmlFiles/reviews-queries.xml";
             string queriesResultsFile = "../../../XmlFiles/reviews-search-results.xml";
 
-            var bookParser = new BookParser(data, fileToParse);
-            bookParser.ParseFile();
+            //var bookParser = new BookParser(data, fileToParse);
+            //bookParser.ParseFile();
+
+            var xmlQueryExecutor = new XmlQueryExecutor(data, queriesFile, queriesResultsFile);
+            xmlQueryExecutor.ExecuteQueries();
         }
     }
 }
