@@ -1,47 +1,23 @@
 ﻿namespace Bookstore.Utilities
 {
-    using Bookstore.Data;
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using System.Xml.Linq;
+
+    using Bookstore.Data;
 
     public abstract class XmlDataParser
     {
-        private BookstoreData data;
-        private string pathToFile;
-
         public XmlDataParser(BookstoreData data, string pathToFile)
         {
             this.Data = data;
             this.PathToFile = pathToFile;
         }
 
-        protected BookstoreData Data
-        {
-            get
-            {
-                return this.data;
-            }
-            set
-            {
-                this.data = value;
-            }
-        }
+        protected BookstoreData Data { get; set; }
 
-        protected string PathToFile
-        {
-            get
-            {
-                return this.pathToFile;
-            }
-            set
-            {
-                this.pathToFile = value;
-            }
-        }
+        protected string PathToFile { get; set; }
 
         public abstract void ParseFile();
 

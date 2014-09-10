@@ -1,0 +1,39 @@
+Connection string for "Company" database: (location)
+	I've used SQL Server 2012, be that kind to change the connection string in the app.config files, if you are using an EXPRESS version
+	
+  <connectionStrings>
+    <add name="CompanyEntities" connectionString="metadata=res://*/CompanyModel.csdl|res://*/CompanyModel.ssdl|res://*/CompanyModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.;initial catalog=Company;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+
+Connection string for "Cars" database: (location)
+	Connection string is set in every app.config file for using the SQL Server, there is also an SQL Server EXPRESS connection string,
+	but so kind and check if it is correct. To use the express connection string just comment the one above.
+	
+  <connectionStrings>
+    <add name="CarsConnection" connectionString="Data Source=.;Initial Catalog=Cars;Integrated Security=True" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+
+Relationships for "Company" database: (first-table : second-table - type of relationship)
+	Each Employee may have a Manager - 1 to many, foreign key is the id of the employee	
+	Each Employee has a Report -> 1 to 1
+	
+	Each Employee has many Projects -> 1 to many
+	Each Project has many Emoloyess -> 1 to many
+	
+	EmployeesProjects -> many to many, additional table
+	
+	Each Employee has a Deparment -> 1 to 1
+	
+	Each Deparment has Emoloyess -> many to 1
+	
+Relationships for "Cars" database: (first-table : second-table - type of relationship)
+	Each Car has Manufacturer -> 1 to many
+	Each Car has Dealer -> 1 to many
+	
+	Each City has Dealers -> many to many
+	
+	Each Dealer has Cities -> many to many
+	Each Dealer has Cars -> many to 1
+	
+	Each Manufacturer has Cars -> 1 to many
+Query files: (file location in solution)
